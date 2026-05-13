@@ -1,4 +1,4 @@
-package cl.duoc.rednorte.controller;
+package cl.duoc.rednorte;
 
 import cl.duoc.rednorte.model.Paciente;
 import cl.duoc.rednorte.service.PacienteService;
