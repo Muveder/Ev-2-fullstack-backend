@@ -25,7 +25,7 @@ public class CitaService {
         return citaRepository.save(cita);
         
     }
-    public void eliminarCita(long id) {
-        citaRepository.deleteById(id);
-    }
+    public void eliminarCita(Long id) {
+    citaRepository.deleteById(id);
+}
 }
