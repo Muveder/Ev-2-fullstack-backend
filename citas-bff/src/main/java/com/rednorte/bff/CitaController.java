@@ -1,13 +1,9 @@
-package com.rednorte.bff.controller;
+package com.rednorte.bff;
 
 import com.rednorte.bff.client.CitaClient;
 import com.rednorte.bff.dto.CitaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*; // Importa todas las anotaciones de una vez
 import java.util.List;
 
 @RestController
@@ -25,6 +21,18 @@ public class CitaController {
     @GetMapping("/{id}")
     public CitaDTO buscarPorId(@PathVariable Long id) {
         return citaClient.getById(id);
+    }
+
+    // --- MÉTODOS QUE FALTABAN ---
+
+    @PostMapping // Para CREAR
+    public CitaDTO crear(@RequestBody CitaDTO cita) {
+        return citaClient.crearCita(cita);
+    }
+
+    @PutMapping("/{id}") // Para EDITAR
+    public CitaDTO actualizar(@PathVariable Long id, @RequestBody CitaDTO cita) {
+        return citaClient.actualizarCita(id, cita);
     }
 
     @DeleteMapping("/{id}")

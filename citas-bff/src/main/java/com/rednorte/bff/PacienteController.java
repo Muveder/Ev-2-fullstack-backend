@@ -1,4 +1,4 @@
-package com.rednorte.bff.controller;
+package com.rednorte.bff;
 
 import com.rednorte.bff.client.PacienteClient;
 import com.rednorte.bff.dto.PacienteDTO;
@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/pacientes")
+
 public class PacienteController {
 
     @Autowired
