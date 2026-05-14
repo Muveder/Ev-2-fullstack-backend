@@ -13,4 +13,6 @@ Estructura del Proyecto
 bash:  ./mvnw clean package -DskipTests
 
 3.Levantar la infraestructura completa con Docker:
-Bash: docker-compose up --build
+Bash: 
+cd Ev-2-fullstack-backend
+docker-compose up --build
