@@ -10,7 +10,7 @@ Estructura del Proyecto
 1. Clonar el repositorio.
   
 2. Compilar los microservicios:
-bash:  mvn clean package -DskipTests
+bash:  ./mvnw clean package -DskipTests
 
 3.Levantar la infraestructura completa con Docker:
 Bash: docker-compose up --build
