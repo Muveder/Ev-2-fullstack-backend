@@ -29,4 +29,8 @@ public class MedicoController {
     public Medico crear(@RequestBody Medico medico) {
         return medicoService.guardar(medico);
     }
+    @DeleteMapping("/{id}")
+public void eliminar(@PathVariable Long id) {
+    medicoService.eliminarMedico(id);
+}
 }

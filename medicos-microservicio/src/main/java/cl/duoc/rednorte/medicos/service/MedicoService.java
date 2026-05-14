@@ -22,4 +22,7 @@ public class MedicoService {
     public Medico obtenerPorId(Long id) {
         return medicoRepository.findById(id).orElse(null);
     }
+    public void eliminarMedico(Long id) {
+    medicoRepository.deleteById(id);
+}
 }

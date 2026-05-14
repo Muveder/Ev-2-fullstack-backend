@@ -28,4 +28,8 @@ public Cita buscarPorId(@PathVariable Long id) {
     public Cita crear(@RequestBody Cita cita) {
         return citaService.agendarCita(cita);
     }
+@   DeleteMapping("/{id}")
+public void eliminar(@PathVariable Long id) {
+    citaService.eliminarCita(id);
+}    
 }
